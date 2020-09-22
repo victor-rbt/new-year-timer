@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <title>Portfólio</title>
+</head>
+<body>
+    
+    <section class="bloco-central">
+        <div class="escurecer">
+            <div class="titulo">
+                <p>Contagem para o ano novo de <span id="ano"></span></p>
+            </div>
+    
+            <div class="cronometro">
+                <ul>
+                    <li id="dias"></li>
+                    <li>Dias</li>
+                  </ul>
+          
+                  <ul>
+                    <li id="horas"></li>
+                    <li>Horas</li>
+                  </ul>
+          
+                  <ul>
+                    <li id="minutos"></li>
+                    <li>Minutos</li>
+                  </ul>
+          
+                  <ul>
+                    <li id="segundos"></li>
+                    <li>Segundos</li>
+                  </ul>
+            </div>
+        </div>
+    </section>
+
+<script>
+const ano = new Date().getFullYear() + 1;
+const anoNovo = new Date(`January 01 ${ano} 00:00:00`);
+
+const txtDias = document.querySelector('#dias');
+const txtHoras = document.querySelector('#horas');
+const txtMinutos = document.querySelector('#minutos');
+const txtSegundos = document.querySelector('#segundos');
+const txtAno = document.querySelector('#ano');
+
+txtAno.innerHTML = ano
+
+const atualizarTempo = () => {
+    const dataAtual = new Date()
+    const diferenca = anoNovo - dataAtual
+
+    const dias = Math.floor(diferenca / 1000 / 60 / 60 / 24);
+    const horas = Math.floor(diferenca / 1000 / 60 / 60) % 24;
+    const minutos = Math.floor(diferenca / 1000 / 60) % 60;
+    const segundos = Math.floor(diferenca / 1000) % 60;
+
+    txtSegundos.innerHTML = segundos < 10 ? '0' + segundos : segundos;
+    txtMinutos.innerHTML = minutos < 10 ? '0' + minutos : minutos;
+    txtHoras.innerHTML = horas < 10 ? '0' + horas : horas;
+    txtDias.innerHTML = dias < 10 ? '0' + dias : dias;
+}
+setInterval(atualizarTempo, 1000)
+
+</script>
+</body>
+</html>
