@@ -24,19 +24,24 @@ body{
     background-color: rgba(0, 0, 0, 0.5);
 }
 .escurecer{
-    width: 45%;
+    width: 44%;
     color: #FFF;
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .titulo{
+    width: 100%;
     font-size: 2.2rem;
     margin-bottom: 35px;
 }
 .cronometro{
+    width: 100%;
     font-size: 1.2rem;
     display: flex;
     justify-content: space-between;
@@ -47,13 +52,25 @@ body{
     text-shadow: 0 6px 12px rgba(255, 255, 255, 0.45);
     font-weight: 500;
 }
+.spinner{
+    border: 8px solid #FFF;
+    border-top: 8px solid #111;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: spin 2s;
+}
+@keyframes spin{
+    0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
 
 @media screen and (max-width: 480px){
     .escurecer{
-        width: 85%;
+        width: 90%;
     }
     .titulo{
-        font-size: 1.25rem;
+        font-size: 1rem;
     }
     .cronometro{
         font-size: 1rem;
