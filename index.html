@@ -3,41 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
-    <title>Portfólio</title>
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <title>New Year Timer</title>
 </head>
 <body>
-    
     <section class="bloco-central">
         <div class="escurecer">
-            <div class="titulo">
-                <p>Contagem para o ano novo de <span id="ano"></span></p>
-            </div>
-    
-            <div class="cronometro">
-                <ul>
-                    <li id="dias"></li>
-                    <li>Dias</li>
-                  </ul>
-          
-                  <ul>
-                    <li id="horas"></li>
-                    <li>Horas</li>
-                  </ul>
-          
-                  <ul>
-                    <li id="minutos"></li>
-                    <li>Minutos</li>
-                  </ul>
-          
-                  <ul>
-                    <li id="segundos"></li>
-                    <li>Segundos</li>
-                  </ul>
-            </div>
+			<div class="titulo">
+				<p>Contagem para o ano novo de <span id="ano"></span></p>
+			</div>
+
+			<div class="cronometro">
+				<ul>
+					<li id="dias"></li>
+					<li>Dias</li>
+				</ul>
+		
+				<ul>
+					<li id="horas"></li>
+					<li>Horas</li>
+				</ul>
+		
+				<ul>
+					<li id="minutos"></li>
+					<li>Minutos</li>
+				</ul>
+		
+				<ul>
+					<li id="segundos"></li>
+					<li>Segundos</li>
+				</ul>
+			</div>
         </div>
     </section>
-
 <script>
 const ano = new Date().getFullYear() + 1;
 const anoNovo = new Date(`January 01 ${ano} 00:00:00`);
