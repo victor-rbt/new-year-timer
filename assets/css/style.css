@@ -10,9 +10,8 @@
 }
 body{
     width: 100vw;
-    max-width: 1440px;
     height: 100vh;
-    background-image: url(../img/bg.jpg);
+    background-image: url(../img/background.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
