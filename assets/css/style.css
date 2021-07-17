@@ -6,12 +6,12 @@
     text-decoration: none;
     list-style: none;
     border-collapse: collapse;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Russo One', sans-serif;
 }
 body{
     width: 100vw;
     height: 100vh;
-    background-image: url(../img/background.jpg);
+    background-image: url(../img/thumb-1920-338258.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -20,11 +20,10 @@ body{
 .bloco-central{
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 .escurecer{
     width: 44%;
-    color: #FFF;
+    color: #111;
     position: absolute;
     top: 40%;
     left: 50%;
@@ -43,13 +42,14 @@ body{
     width: 100%;
     font-size: 1.2rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     text-align: center;
 }
 .cronometro ul li, .titulo p{
-    text-shadow: 0 6px 12px rgba(255, 255, 255, 0.45);
+    text-shadow: 0 6px 12px rgba(0, 0, 0, 0.45);
     font-weight: 500;
+    margin: 0 12px;
 }
 .spinner{
     border: 8px solid #FFF;
